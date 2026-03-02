@@ -6,7 +6,7 @@ This project fine-tunes an XLM-RoBERTa model on the Multilingual Amazon Reviews 
 
 - `NLP.ipynb`: Main notebook for data loading, preprocessing, model fine-tuning, evaluation, and error analysis.
 - `results/`: Directory created by the Trainer to store checkpoints and logs (after training).
-- `xlmr_sentiment_en/`: Saved fine-tuned XLM-RoBERTa model and tokenizer (created by the notebook).
+- `xlmr_sentiment_en/`: Saved fine-tuned XLM-RoBERTa models and tokenizer (created by the notebook).
 
 ## Dataset
 
@@ -16,7 +16,7 @@ The project uses the **Amazon Reviews Multi** dataset (English, French, Spanish 
 - Label field: `label` (0–4, mapped directly to 5 sentiment classes)
 
 Dataset page:  
-https://huggingface.co/datasets/amazon_reviews_multi
+[https://huggingface.co/datasets/amazon_reviews_multi](https://huggingface.co/datasets/mteb/amazon_reviews_multi)
 
 ## Model
 
@@ -24,11 +24,9 @@ The model is **XLM-RoBERTa Base** (`xlm-roberta-base`) from Hugging Face, fine-t
 
 - Backbone: XLM-RoBERTa
 - Task: Sentiment classification (1–5 stars)
-- Training: Monolingual (English) fine-tuning
-- Evaluation: English test set, plus zero-shot transfer on French and Spanish test sets
+- Training: Monolingual (English) and Multilingual (English, French and Spanish) fine-tuning
+- Evaluation: Monolingual : English test set, plus zero-shot transfer on French and Spanish test sets and Multilingual : English, French and Spanish test sets
 
-Model page:  
-https://huggingface.co/xlm-roberta-base
 
 ## Training & Evaluation
 
@@ -40,7 +38,8 @@ Main steps in the notebook:
 4. Fine-tune `xlm-roberta-base` for 3 epochs using the Hugging Face `Trainer` API.
 5. Evaluate on the English test set (loss, accuracy, weighted F1).
 6. Perform zero-shot evaluation on French and Spanish test sets using the English-fine-tuned model.
-7. Run a small error analysis on misclassified negative reviews.
+7. Evaluate the multilingual on the English, French and Spanish test sets (loss, accuracy, weighted F1).
+8. Run a small error analysis on misclassified negative reviews.
 
 
 ## How to Run
@@ -65,6 +64,6 @@ Main steps in the notebook:
 - Conneau, A., Khandelwal, K., Goyal, N., et al. (2020). “Unsupervised Cross-lingual Representation Learning at Scale.” ACL 2020 (XLM-RoBERTa).  
   Model: https://huggingface.co/xlm-roberta-base
 
-```
+
 
 
