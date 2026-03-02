@@ -59,10 +59,11 @@ Main steps in the notebook:
 ## References
 
 - Keung, P., Lu, Y., Szarvas, G. (2020). “The Multilingual Amazon Reviews Corpus.” EMNLP 2020.  
-  Dataset: https://huggingface.co/datasets/amazon_reviews_multi
+  Dataset: [https://huggingface.co/datasets/amazon_reviews_multi](https://huggingface.co/datasets/mteb/amazon_reviews_multi)
 
 - Conneau, A., Khandelwal, K., Goyal, N., et al. (2020). “Unsupervised Cross-lingual Representation Learning at Scale.” ACL 2020 (XLM-RoBERTa).  
   Model: https://huggingface.co/xlm-roberta-base
+
 
 
 
