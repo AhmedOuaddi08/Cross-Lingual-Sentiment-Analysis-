@@ -1,6 +1,3 @@
-Here is the `README.md` file content you can save directly:
-
-markdown
 # Multilingual Amazon Reviews Sentiment Classification
 
 This project fine-tunes an XLM-RoBERTa model on the Multilingual Amazon Reviews (English, French, Spanish) dataset to perform 5-class sentiment classification (1–5 stars). It includes monolingual training on English reviews and zero-shot evaluation on French and Spanish, along with basic error analysis and comparison tables.
@@ -69,3 +66,4 @@ Main steps in the notebook:
   Model: https://huggingface.co/xlm-roberta-base
 
 ```
+
